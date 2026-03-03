@@ -27,25 +27,41 @@ main{max-width:1200px;margin:2rem auto;padding:0 1rem}
 h2{text-align:center;margin-bottom:1.25rem;font-size:1.9rem}
 
 /* Menu grid using flexbox */
-.menu-grid{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:stretch}
-.menu-card{background:linear-gradient(180deg,var(--card),#0f2433);width:320px;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(2,6,23,0.6);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.menu-grid{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:flex-start;align-items:stretch}
+.menu-card{background:linear-gradient(180deg,var(--card),#0f2433);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(2,6,23,0.6);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;flex:1 1 320px;min-width:240px}
 .menu-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.7)}
-.card-img{width:100%;height:200px;object-fit:cover;display:block}
-.card-content{padding:1rem 1rem 1.1rem;display:flex;flex-direction:column;gap:0.6rem}
+.menu-card .card-img{width:100%;height:200px;object-fit:cover;display:block}
+.menu-card .card-content{padding:1rem;display:flex;flex-direction:column;gap:0.6rem}
 .pizza-name{margin:0;font-size:1.15rem;color:#fff}
 .description{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.4}
 .price{margin-top:auto;font-weight:700;color:var(--accent-yellow);font-size:1.05rem}
+
+/* Make the first card a featured hero row */
+.menu-card:first-child{flex-basis:100%;display:flex;flex-direction:row;align-items:stretch}
+.menu-card:first-child .card-img{height:auto;min-height:320px;flex:1 1 55%;object-position:center}
+.menu-card:first-child .card-content{flex:1 1 45%;padding:2rem}
+.menu-card:first-child .pizza-name{font-size:1.6rem}
+.menu-card:first-child .description{font-size:1.05rem;color:#e9eef6}
+
+/* Make card content layout adapt on wider screens */
+@media (min-width:900px){
+  .menu-card{min-width:300px}
+  .card-content{display:flex;flex-direction:column}
+  .price{align-self:flex-end}
+}
 
 /* Footer */
 footer{text-align:center;padding:1.25rem;background:linear-gradient(90deg,#071425,var(--accent));color:var(--muted);font-size:0.95rem}
 
 /* Small screens */
 @media (max-width:900px){
-  .menu-card{width:48%}
+  .menu-card{flex:1 1 48%}
 }
 @media (max-width:600px){
-  .menu-card{width:100%}
+  .menu-card{flex:1 1 100%}
   .card-img{height:180px}
+  .menu-card:first-child{flex-direction:column}
+  .menu-card:first-child .card-img{min-height:220px}
   header h1{font-size:1.6rem}
   h2{font-size:1.4rem}
 }
