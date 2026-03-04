@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Crustacean’s Forge - Pizza Menu</title> 
-
+    <title>The Crustacean’s Forge - Pizza Menu</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
     <header>
@@ -13,88 +14,136 @@
         <p>Artisanal pizzas fired in our deep-sea stone oven.</p>
     </header>
 
+
+    <section>
+        <h2> Order in the next 5 minutes and get 10% off!</h2>
+        <div id="promo"></div>
+    </section>
     <main>
         <section aria-labelledby="menu-heading">
             <h2 id="menu-heading">Our Signature Pizzas</h2>
             
-            <table border="1">
-                <caption>Selection of 12 handcrafted pizzas with fresh ingredients</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Pizza Name</th>
-                        <th scope="col">Description & Ingredients</th>
-                        <th scope="col">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">The Iron Anchor</th>
-                        <td>Classic Margherita with San Marzano tomatoes, fresh buffalo mozzarella, and basil.</td>
-                        <td>$14.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Barnacle Bite</th>
-                        <td>Zesty pepperoni, spicy salami, and a blend of aged provolone and mozzarella.</td>
-                        <td>$16.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Neptune’s Garden</th>
-                        <td>Roasted artichokes, spinach, red peppers, and garlic infused olive oil.</td>
-                        <td>$15.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">The Siren’s Song</th>
-                        <td>Sweet fig jam, prosciutto di Parma, goat cheese, and fresh arugula.</td>
-                        <td>$18.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Trident Truffle</th>
-                        <td>Wild mushrooms, black truffle oil, ricotta, and cracked black pepper.</td>
-                        <td>$19.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Coral Kick</th>
-                        <td>Spicy Italian sausage, pickled jalapeños, and honey-infused tomato sauce.</td>
-                        <td>$17.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Deep Blue BBQ</th>
-                        <td>Grilled chicken, red onions, smoked gouda, and tangy house BBQ sauce.</td>
-                        <td>$17.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">The Kraken’s Ink</th>
-                        <td>Squid ink infused crust, calamari, lemon zest, and parsley pesto.</td>
-                        <td>$20.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Sunken Treasure</th>
-                        <td>Roasted pineapple, smoked ham, and a dusting of toasted coconut.</td>
-                        <td>$16.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tidal White</th>
-                        <td>Four cheese blend of ricotta, parmesan, pecorino, and fontina with garlic.</td>
-                        <td>$15.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">The Leviathan</th>
-                        <td>Meat lovers' delight: Meatballs, bacon, pepperoni, and Italian sausage.</td>
-                        <td>$21.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Pearl Pesto</th>
-                        <td>Basil pesto base, cherry tomatoes, pine nuts, and fresh burrata cheese.</td>
-                        <td>$18.00</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="menu-grid" aria-label="Pizza menu" role="list">
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/margherita pizza image.jpg" alt="Margherita Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">The Iron Anchor</h3>
+                        <p class="description">Classic Margherita with San Marzano tomatoes, fresh buffalo mozzarella, and basil.</p>
+                        <div class="price">$14.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/pepperoni pizza image.jpg" alt="Pepperoni Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Barnacle Bite</h3>
+                        <p class="description">Zesty pepperoni, spicy salami, and a blend of aged provolone and mozzarella.</p>
+                        <div class="price">$16.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/vegitarian pizza image.jpg" alt="Vegetarian Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Neptune’s Garden</h3>
+                        <p class="description">Roasted artichokes, spinach, red peppers, and garlic infused olive oil.</p>
+                        <div class="price">$15.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/fig prosciutto pizza image.jpg" alt="Fig Prosciutto Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">The Siren’s Song</h3>
+                        <p class="description">Sweet fig jam, prosciutto di Parma, goat cheese, and fresh arugula.</p>
+                        <div class="price">$18.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/truffle pizza image.jpg" alt="Truffle Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Trident Truffle</h3>
+                        <p class="description">Wild mushrooms, black truffle oil, ricotta, and cracked black pepper.</p>
+                        <div class="price">$19.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/Sausage pizza image.jpg" alt="Sausage Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Coral Kick</h3>
+                        <p class="description">Spicy Italian sausage, pickled jalapeños, and honey-infused tomato sauce.</p>
+                        <div class="price">$17.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/BBQ chicken pizza image.jpg" alt="BBQ Chicken Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Deep Blue BBQ</h3>
+                        <p class="description">Grilled chicken, red onions, smoked gouda, and tangy house BBQ sauce.</p>
+                        <div class="price">$17.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/seafoos pizza image.jpg" alt="Seafood Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">The Kraken’s Ink</h3>
+                        <p class="description">Squid ink infused crust, calamari, lemon zest, and parsley pesto.</p>
+                        <div class="price">$20.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/hawaiian pizza image.jpg" alt="Hawaiian Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Sunken Treasure</h3>
+                        <p class="description">Roasted pineapple, smoked ham, and a dusting of toasted coconut.</p>
+                        <div class="price">$16.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/cheese pizza image.jpg" alt="White Cheese Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Tidal White</h3>
+                        <p class="description">Four cheese blend of ricotta, parmesan, pecorino, and fontina with garlic.</p>
+                        <div class="price">$15.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/meat lover's pizza image.jpg" alt="Meat Lovers Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">The Leviathan</h3>
+                        <p class="description">Meat lovers' delight: Meatballs, bacon, pepperoni, and Italian sausage.</p>
+                        <div class="price">$21.00</div>
+                    </div>
+                </article>
+
+                <article class="menu-card" role="listitem">
+                    <img src="images/pesto pizza image.jpg" alt="Pesto Pizza" class="card-img">
+                    <div class="card-content">
+                        <h3 class="pizza-name">Pearl Pesto</h3>
+                        <p class="description">Basil pesto base, cherry tomatoes, pine nuts, and fresh burrata cheese.</p>
+                        <div class="price">$18.00</div>
+                    </div>
+                </article>
+
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 The Crustacean’s Forge. Located at 123 Deep Sea Way.</p>
     </footer>
+</footer>
+
+    <script src="scripts/script.js"></script>
 
 </body>
 </html>
+
